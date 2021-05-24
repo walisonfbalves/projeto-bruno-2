@@ -7,7 +7,7 @@
     <title>Ferpitel Bank</title>
 
     <link rel="stylesheet" type="text/css" href="style.css">
-    <script src="script.js" defer></script>
+    <script type="text/javascript" src="script.js"></script>
 
     
 </head>
@@ -36,24 +36,35 @@
 
             <div class = "campo">
                 <label for="agencia"><strong>Agência</strong></label>
-                <input type="text" name="agencia" id="agencia" required>
+                <input type="text" name="agencia" id="Agencia" required>
             </div>
 
             <div class = "campo">
                 <label for ="conta"><strong>Conta</strong></label>
-                <input type="text" name="conta" id="conta" required>
+                <input type="text" name="conta" id="Conta" required>
             </div>
 
         </fieldset>
-
-        <button class="botao" type="submit">Salvar</button>
-
-        <fieldset>
-            <div class = "campo1">
-                 <label for ="clientesAdicionados"><strong>Clientes Adicionados</strong></label>
-                 <input type="text" name="clientesAdicionados" id="clientesAdicionados">
+        <input class="botao" type="button" value="Inserir" onclick="inserirCliente( nome.value, RG.value, CPF.value, agencia.value, conta.value)">
+        <input class="botao" type="button" value="Salvar" onclick="salvarCliente(nome, )">
+        <input class="botao" type="button" value="Excluir" onclick="excluirCliente()">
+        
+            <div id = "tabela">
+                <table id="tbCliente">
+                    <thead>
+                        <tr>
+                            <td>ID</td>
+                            <td>Nome</td>
+                            <td>RG</td>
+                            <td>CPF</td>
+                            <td>Agência</td>
+                            <td>Conta</td>
+                        </tr>
+                    </thead>
+                </table>
+                 
             </div>
-        </fieldset>
+        
 
     </form>
     
