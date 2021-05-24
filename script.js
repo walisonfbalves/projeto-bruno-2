@@ -1,7 +1,9 @@
 function inserirCliente(nome, rg, cpf, agencia, conta){
+
+    var clientes, index;
     
     //peguei a tabela pelo id
-    var clientes = document.getElementById("tbCliente");
+    clientes = document.getElementById("tbCliente");
 
     // ver quantas linhas tem a tabela
     var qtdLinhas = clientes.rows.length;
@@ -40,17 +42,18 @@ function salvarCliente(nome, rg, cpf, agencia, conta) {
 
 function preencherCamposForm() {
 
+    // Loop para navergar nas linhas da tabela
     for(var i = 0; i < clientes.rows.length; i++)
     {
         clientes.rows[i].onclick = function()
         {
             index = this.rowIndex;
-            document.getElementById("ID").value = pessoas.rows[index].cells[0].innerText;
-            document.getElementById("nome").value = pessoas.rows[index].cells[1].innerText;
-            document.getElementById("RG").value = pessoas.rows[index].cells[2].innerText;
-            document.getElementById("CPF").value = pessoas.rows[index].cells[3].innerText;
-            document.getElementById("agencia").value = pessoas.rows[index].cells[4].innerText;
-            document.getElementById("conta").value = pessoas.rows[index].cells[5].innerText;
+            document.getElementById("ID").value = clientes.rows[index].cells[0].innerText;
+            document.getElementById("nome").value = clientes.rows[index].cells[1].innerText;
+            document.getElementById("RG").value = clientes.rows[index].cells[2].innerText;
+            document.getElementById("CPF").value = clientes.rows[index].cells[3].innerText;
+            document.getElementById("agencia").value = clientes.rows[index].cells[4].innerText;
+            document.getElementById("conta").value = clientes.rows[index].cells[5].innerText;
         }
     }
 }

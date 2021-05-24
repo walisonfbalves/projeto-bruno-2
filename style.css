@@ -89,7 +89,9 @@ fieldset.grupo .campo {
     color: #59429d; 
 }
 
+
 table tr td {
+    border-bottom: 1px solid #ccbbff;
     font-family: sans-serif;
     font-size: 1.2em;
     width: 300px;
