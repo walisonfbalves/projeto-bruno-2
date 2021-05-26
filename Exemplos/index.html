@@ -1,0 +1,39 @@
+<h1>Cadastro de usuário</h1>
+<link rel="stylesheet" type="text/css" href="main.css" />
+<section>
+  <form>
+    <div class="inputs"> 
+      <div class="inside">
+        <label for="nome">*Nome:</label>
+        <input class="inp" id="nome" name="nome" type="text" placeholder="Digite seu nome aqui" autofocus/>
+      </div>
+      <div class="inside">
+        <label for="cpf">*CPF:</label>
+        <input class="inp" id="cpf" name="cpf" type="number" placeholder="Digite seu CPF" />
+      </div>
+      <div class="inside">
+        <label for="rg">*RG:</label>
+        <input class="inp" id="rg" name="rg" type="number" placeholder="Digite seu RG" />
+      </div>
+    </div>
+    <div class="botoes">
+      <button clas="bot" id="adicionarBotao" onclick="adicionarItem()" type="button">Adicionar</button>
+      <button clas="bot" id="excluirBotao" onclick="removerItem()" type="button">Excluir</button>
+    </div>
+    </form>
+</section>
+<div class="tabelas">
+  <table>
+    <thead>
+      <tr>
+        <th>Selecionar</th>
+        <th>Nome</th>
+        <th>CPF</th>
+        <th>RG</th>
+      </tr>
+    </thead>
+    <tbody id="tabela">
+
+    </tbody>
+  </table>
+</div>
