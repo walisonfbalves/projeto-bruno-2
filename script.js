@@ -1,6 +1,7 @@
 function inserirCliente(nome, rg, cpf, agencia, conta){
 
-    var clientes, index;
+    var clientes;
+    var index;
     
     //peguei a tabela pelo id
     clientes = document.getElementById("tbCliente");

@@ -1,13 +1,11 @@
 class Cliente {
 
-    constructor() 
-    {
+    constructor() {
         this.id = 1;
         this.arrayClientes = [];
     }
 
-    salvar() 
-    {
+    salvar() {
 
         let cliente = this.lerDados();
 
@@ -19,9 +17,7 @@ class Cliente {
         
     }
 
-    listaTabela() 
-
-    {
+    listaTabela() {
 
         let tbody = document.getElementById("tbody")
         
@@ -49,15 +45,13 @@ class Cliente {
         }
     }
 
-    adicionar(cliente)
-    {
+    adicionar(cliente) {
         this.arrayClientes.push(cliente);
         this.id++;
     }
 
 
-    lerDados() 
-    {
+    lerDados() {
         let cliente = {}
 
         cliente.id = this.id;
@@ -70,8 +64,7 @@ class Cliente {
         return cliente;
     }
 
-    validaCampos(cliente) 
-    {
+    validaCampos(cliente) {
         let msg = "";
 
         if(cliente.nome == '') {
@@ -96,8 +89,7 @@ class Cliente {
         
     }
 
-    cancelar() 
-    {
+    cancelar() {
         document.getElementById('nome').value = "";
         document.getElementById('rg').value = "";
         document.getElementById('cpf').value = "";
