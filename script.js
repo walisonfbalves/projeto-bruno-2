@@ -62,7 +62,7 @@ function preencherCamposForm() {
 function excluirCliente() {
 
     //função para excluir o cliente
-    for(var =i  0; i < clientes.rows.length; i++)
+    for(var i = 0; i < clientes.rows.length; i++)
     {
         if (index == i)
             clientes.deleteRow(index);
