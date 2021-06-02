@@ -9,7 +9,7 @@
     <link rel="stylesheet" type="text/css" href="style.css">
     <script type="text/javascript" src="script.js"></script>
 
-    
+
 </head>
 <body>
     <div>
@@ -18,16 +18,20 @@
         <p id="acao">Novo</p>
     </div>
 
-    <form>
-        <fieldset id = "grupo">
+
+     
+    <form name="form" id="form">
+        <input type="hidden" name="id" id="id">
+       
+        <fieldset id="grupo">
             <div class = "campo">
                 <label for="nome"><strong>Nome</strong></label>
-                <input type="text" name = "nome" id ="nome" maxlength="35" placeholder= "Digite seu nome" required>
+                <input type="text" name="nome" id="nome"  maxlength="35" placeholder= "Digite seu nome" required>
             </div>
 
             <div class = "campo">
                 <label for="RG"><strong>RG</strong></label>
-                <input type="text" name ="rg"  id = "rg" maxlength="8" placeholder="Digite seu RG" oninput="apenasNumeros(this)" required>
+                <input type="text"  name="rg" id="rg" maxlength="8" placeholder="Digite seu RG" oninput="apenasNumeros(this)" required>
             </div>
 
             <div class = "campo">
@@ -37,15 +41,16 @@
 
             <div class = "campo">
                 <label for="agencia"><strong>Agência</strong></label>
-                <input type="text" name="agencia" id="agencia" maxlength="6" placeholder="Digite sua agência" oninput="apenasNumeros(this)" required>
+                <input type="text" name="agencia" id="agencia" maxlength="6" placeholder="Digite sua agência" oninput="apenasNumeros(this)"  required>
             </div>
 
             <div class = "campo">
                 <label for ="conta"><strong>Conta</strong></label>
-                <input type="text" name="conta" id="conta" maxlength="6" placeholder="Digite sua conta" oninput="apenasNumeros(this)"  required>
+                <input type="text" name="conta" id="conta" maxlength="6" placeholder="Digite sua conta" oninput="apenasNumeros(this)" required>
             </div>
 
         </fieldset>
+
         <input class="botao" type="button" id="inserir" value="Inserir" onclick="inserirCliente()" />
         <input class="botao" type="button" id="alterar" value="alterar" onclick="fAlterar()" style="display:none;" />
         <input class="botao" type="button" id="cancelar" value="cancelar" onclick="fCancelar()" style="display:none;" />
@@ -72,3 +77,11 @@
     
 </body>
 </html>
+
+
+
+
+
+
+
+
