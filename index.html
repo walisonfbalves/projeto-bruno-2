@@ -15,44 +15,46 @@
     <div>
         <h1 id = "titulo">Cadastro de Clientes </h1>
         <p id = "subtitulo">Complete com suas informações</p>
+        <p id="acao">Novo</p>
     </div>
 
     <form>
         <fieldset id = "grupo">
             <div class = "campo">
                 <label for="nome"><strong>Nome</strong></label>
-                <input type="text" name = "nome" id ="nome" required>
+                <input type="text" name = "nome" id ="nome" maxlength="35" placeholder= "Digite seu nome" required>
             </div>
 
             <div class = "campo">
                 <label for="RG"><strong>RG</strong></label>
-                <input type="text" name ="rg" id = "rg" required>
+                <input type="text" name ="rg"  id = "rg" maxlength="8" placeholder="Digite seu RG" oninput="apenasNumeros(this)" required>
             </div>
 
             <div class = "campo">
                 <label for="CPF"><strong>CPF</strong></label>
-                <input type="text" name="cpf" id="cpf" required>
+                <input type="text"  name="cpf" id="cpf"  placeholder= "Digite seu CPF" oninput="mascaraCPF(this)" required>
             </div>
 
             <div class = "campo">
                 <label for="agencia"><strong>Agência</strong></label>
-                <input type="text" name="agencia" id="agencia" required>
+                <input type="text" name="agencia" id="agencia" maxlength="6" placeholder="Digite sua agência" oninput="apenasNumeros(this)" required>
             </div>
 
             <div class = "campo">
                 <label for ="conta"><strong>Conta</strong></label>
-                <input type="text" name="conta" id="conta" required>
+                <input type="text" name="conta" id="conta" maxlength="6" placeholder="Digite sua conta" oninput="apenasNumeros(this)"  required>
             </div>
 
         </fieldset>
-        <input class="botao" type="button" value="Inserir" onclick="inserirCliente( nome.value, rg.value, cpf.value, agencia.value, conta.value)">
-        <input class="botao" type="button" value="Salvar" onclick="salvarCliente()">
-        <input class="botao" type="button" value="Excluir" onclick="excluirCliente()">
-        
+        <input class="botao" type="button" id="inserir" value="Inserir" onclick="inserirCliente()" />
+        <input class="botao" type="button" id="alterar" value="alterar" onclick="fAlterar()" style="display:none;" />
+        <input class="botao" type="button" id="cancelar" value="cancelar" onclick="fCancelar()" style="display:none;" />
+
             <div id = "tabela">
                 <table id="tbCliente">
                     <thead>
                         <tr>
+                            <td></td>
                             <td>ID</td>
                             <td>Nome</td>
                             <td>RG</td>
