@@ -1,3 +1,42 @@
+function validar() {
+    // pegando o valor do nome pelos names
+    var nome = document.getElementById("nome");
+    var cpf = document.getElementById("cpf");
+    var rg = document.getElementById("rg");
+    var agencia = document.getElementById("agencia");
+    var conta = document.getElementById("conta");
+   
+  
+    // verificar se o nome está vazio
+    if (nome.value == "") {
+      alert("Nome não informado");
+  
+      // Deixa o input com o focus
+      nome.focus();
+      // retorna a função e não olha as outras linhas
+      return;
+    }
+    if (cpf.value == "") {
+      alert("CPF não informado");
+      cpf.focus();
+      return;
+    }
+    if (rg.value == "") {
+      alert("RG não informado");
+      rg.focus();
+      return;
+    }
+    if (agencia.value == "") {
+      alert("Agência não informada");
+      agencia.focus();
+      return;
+    }
+    if (conta.value == "") {
+      alert("Conta não informada");
+      conta.focus();
+      return;
+    }
+}
 
 function mascaraCPF(i){
    
@@ -37,6 +76,10 @@ function Guid(arg) {
 
 //
 function inserirCliente(){
+
+    if ( validar() == true ) {
+        return;
+    }
 
     var clientes;
     var index;
