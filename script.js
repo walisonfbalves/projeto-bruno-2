@@ -77,14 +77,11 @@ function Guid(arg) {
 //
 function inserirCliente(){
 
-    if ( validar() == true ) {
-        return;
-    }
 
     var clientes;
     var index;
 
-    var numeroQueNaoSeRete = Guid("N");
+    var numeroQueNaoSeRepete = Guid("N");
     
     //peguei a tabela pelo id
     clientes = document.getElementById("tbCliente");
@@ -95,10 +92,10 @@ function inserirCliente(){
     // Inserindo uma linha, e depois da ultima linha inserir uma nova
     var linha = clientes.insertRow(qtdLinhas);
 
-    var numeroQueNaoSeRete;
+    var numeroQueNaoSeRepete;
 
     //cria propriedade artifical 
-    document.getElementById("tbCliente").rows[qtdLinhas].setAttribute("id", numeroQueNaoSeRete);
+    document.getElementById("tbCliente").rows[qtdLinhas].setAttribute("id", numeroQueNaoSeRepete);
 
 
     // Inserindo as colunas
@@ -111,7 +108,7 @@ function inserirCliente(){
     var cellAgencia = linha.insertCell(5);
     var cellConta = linha.insertCell(6);
 
-    cellbotoes.innerHTML = '<input class="botao" type="button" value="x" title="Excluir" onclick="javascript:excluirCliente(\'' + numeroQueNaoSeRete + '\')" > <input class="botao" title="alterar" type="button" value="a" onclick="javascript:carregarDadosParaAlterar('  + qtdLinhas+ ')"> ';
+    cellbotoes.innerHTML = '<input class="botaoAcoes" type="button" value="Excluir" title="Excluir" onclick="javascript:excluirCliente(\'' + numeroQueNaoSeRepete + '\')" > <input class="botaoAcoes" title="alterar" type="button" value="Alterar" onclick="javascript:carregarDadosParaAlterar('  + qtdLinhas+ ')"> ';
 
     cellID.innerHTML = qtdLinhas;
     cellNome.innerHTML = document.form.nome.value;
@@ -131,8 +128,8 @@ function carregarDadosParaAlterar( linha ) {
      var clientes = document.getElementById("tbCliente");
 
     // função para poder alterar os clientes
-    
-     document.getElementById("nome").value = clientes.rows[linha ].cells[2].innerText;
+     document.getElementById("id").value = linha;
+     document.getElementById("nome").value = clientes.rows[linha].cells[2].innerText;
      document.getElementById("rg").value = clientes.rows[linha].cells[3].innerText;
      document.getElementById("cpf").value = clientes.rows[linha].cells[4].innerText;
      document.getElementById("agencia").value = clientes.rows[linha ].cells[5].innerText;
@@ -165,6 +162,10 @@ function fAlterar() {
      limparDados();
 
      document.getElementById("acao").innerHTML =  "Alterado com sucesso!";
+
+     document.getElementById('inserir').style.display = 'inline';
+     document.getElementById('alterar').style.display = 'none';
+     document.getElementById('cancelar').style.display = 'none';
 
    return;
 }

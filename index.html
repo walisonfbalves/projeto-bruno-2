@@ -15,38 +15,38 @@
     <div>
         <h1 id = "titulo">Cadastro de Clientes </h1>
         <p id = "subtitulo">Complete com suas informações</p>
-        <p id="acao">Inserir novo Cliente</p>
+        <p id="acao">Novo Cliente</p>
     </div>
 
 
      
-    <form id="form">
+    <form name="form" id="form">
         <input type="hidden" name="id" id="id">
        
         <fieldset id="grupo">
             <div class = "campo">
                 <label for="nome"><strong>Nome</strong></label>
-                <input type="text" name="nome" id="nome"  maxlength="35" placeholder= "Digite seu nome" required>
+                <input type="text"  name ="nome" id="nome"  maxlength="35" placeholder= "Digite seu nome" required>
             </div>
 
             <div class = "campo">
                 <label for="RG"><strong>RG</strong></label>
-                <input type="text" id="rg" maxlength="8" placeholder="Digite seu RG" oninput="apenasNumeros(this)" required>
+                <input type="text" name ="rg" id="rg" maxlength="8" placeholder="Digite seu RG" oninput="apenasNumeros(this)" required>
             </div>
 
             <div class = "campo">
                 <label for="CPF"><strong>CPF</strong></label>
-                <input type="text"  id="cpf"  placeholder= "Digite seu CPF" oninput="mascaraCPF(this)"  required>
+                <input type="text" name ="cpf" id="cpf"  placeholder= "Digite seu CPF" oninput="mascaraCPF(this)"  required>
             </div>
 
             <div class = "campo">
                 <label for="agencia"><strong>Agência</strong></label>
-                <input type="text" id="agencia" maxlength="6" placeholder="Digite sua agência" oninput="apenasNumeros(this)"  required>
+                <input type="text" name ="agencia" id="agencia" maxlength="6" placeholder="Digite sua agência" oninput="apenasNumeros(this)"  required>
             </div>
 
             <div class = "campo">
                 <label for ="conta"><strong>Conta</strong></label>
-                <input type="text" id="conta" maxlength="6" placeholder="Digite sua conta" oninput="apenasNumeros(this)" required>
+                <input type="text" name ="conta" id="conta" maxlength="6" placeholder="Digite sua conta" oninput="apenasNumeros(this)" required>
             </div>
 
         </fieldset>
@@ -55,11 +55,11 @@
         <input class="botao" type="button" id="alterar" value="Alterar" onclick="fAlterar()" style="display:none;" />
         <input class="botao" type="button" id="cancelar" value="Cancelar" onclick="fCancelar()" style="display:none;" />
 
-            <div>
-                <table id="tbCliente" >
+            <div id = "tabela">
+                <table id="tbCliente">
                     <thead>
                         <tr>
-                            <th id="none"></th>
+                            <th>Ações</th>
                             <th>ID</th>
                             <th>Nome</th>
                             <th>RG</th>
@@ -68,11 +68,6 @@
                             <th>Conta</th>
                         </tr>
                     </thead>
-                    <tbody>
-                        <tr>
-
-                        </tr>
-                    </tbody>
                 </table>
                  
             </div>
