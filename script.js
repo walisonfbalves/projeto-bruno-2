@@ -131,7 +131,7 @@ function carregarDadosParaAlterar( linha ) {
      var clientes = document.getElementById("tbCliente");
 
     // função para poder alterar os clientes
-     document.getElementById("id").value = linha;
+    
      document.getElementById("nome").value = clientes.rows[linha ].cells[2].innerText;
      document.getElementById("rg").value = clientes.rows[linha].cells[3].innerText;
      document.getElementById("cpf").value = clientes.rows[linha].cells[4].innerText;
@@ -164,14 +164,14 @@ function fAlterar() {
      // limpa os campos apos salvar a edição 
      limparDados();
 
-     document.getElementById("acao").innerHTML =  "Sem ação";
+     document.getElementById("acao").innerHTML =  "Alterado com sucesso!";
 
    return;
 }
 
 function fCancelar(){
 
-    document.getElementById("acao").innerHTML =  "novo";
+    document.getElementById("acao").innerHTML =  "Novo Cliente";
     document.getElementById("id").value = "";
    
     limparDados();

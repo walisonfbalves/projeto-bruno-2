@@ -85,19 +85,65 @@ fieldset.grupo .campo {
 
 
 
+#tbCliente{
+    width:100%;
+    margin:0 auto;
+    border:0;
+    box-shadow: 0 5px 30px darkgrey;
+    border-spacing: 0;
+  }
+  
+  #tbCliente thead th{
+    font-weight: bold;
+    background-color: #13083d;
+    color:white;
+    padding:5px 10px;
+  }
+  
+  #tbCliente tr td{
+    padding:5px 10px;
+    text-align: center;
+    
+    cursor: pointer; /**importante para não mostrar cursor de texto**/
+  }
+  
+  #minhaTabela tr td:last-child{
+    text-align: right;
+  }
+
+  
 #tabela {
+    width: 100%;
+    padding:5px 10px;
     margin-top: 30px;
     color: #59429d; 
+    text-align: center;
 }
 
 
-table tr td {
-    border-bottom: 1px solid #ccbbff;
-    font-family: sans-serif;
-    font-size: 1.2em;
-    width: 300px;
-    color: #59429d;
+
+#acao {
+    padding-bottom: 10px;
+    font-size: 1.1em;
 }
+
+/**Cores**/
+#tbCliente tr:nth-child(odd){
+    background-color: #F0F8FF;
+  }
+  
+  /**Cor quando passar por cima**/
+  #tbCliente tr:hover td{
+    background-color: #ccbbff;
+  }
+  
+  /**Cor quando selecionado**/
+  #tbCliente tr.selecionado td{
+    background-color: #aff7ff;
+  }
+
+
+
 
 
 
