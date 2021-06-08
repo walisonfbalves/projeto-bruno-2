@@ -33,6 +33,10 @@ body {
     justify-content: center;
 }
 
+#tabelaEspaco {
+    width: 10%;
+}
+
 input, button {
     border-radius: 5px;
 }
@@ -78,7 +82,6 @@ input, button {
 }
 
 .botaoAcoes {
-
     font-size: 1em;
     background: #59429d;
     border:0;
@@ -93,7 +96,6 @@ input, button {
     box-shadow: inset 2px 2px 2px rgb(0,0,0,0.2);
     text-shadow: none;
 }
-
 
 #tbCliente {
     width:100%;
@@ -116,11 +118,6 @@ input, button {
     cursor: pointer; /**importante para não mostrar cursor de texto**/
   }
   
-  #tbCliente tr td:last-child{
-    text-align: right;
-  }
-
-  
 
 #acao {
     padding-bottom: 10px;
@@ -139,7 +136,7 @@ input, button {
   
   /**Cor quando selecionado**/
   #tbCliente tr.selecionado td{
-    background-color: #aff7ff;
+    background-color: #9943b3;
   }
 
 
