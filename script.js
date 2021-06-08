@@ -1,41 +1,41 @@
-function validar() {
-    // pegando o valor do nome pelos names
-    var nome = document.getElementById("nome");
-    var cpf = document.getElementById("cpf");
-    var rg = document.getElementById("rg");
-    var agencia = document.getElementById("agencia");
-    var conta = document.getElementById("conta");
-   
-  
-    // verificar se o nome está vazio
-    if (nome.value == "") {
-      alert("Nome não informado");
-  
-      // Deixa o input com o focus
+function validar(){
+
+    var nome = form.nome.value;
+    var rg = form.rg.value;
+    var cpf = form.cpf.value;
+    var agencia = form.agencia.value;
+    var conta = form.conta.value;
+
+    if(nome == ""){
+      alert("Preencha o campo Nome");
       nome.focus();
-      // retorna a função e não olha as outras linhas
-      return;
+      return false;
     }
-    if (cpf.value == "") {
-      alert("CPF não informado");
-      cpf.focus();
-      return;
-    }
-    if (rg.value == "") {
-      alert("RG não informado");
+
+    if(rg == ""){
+      alert("Preencha o campo o RG");
       rg.focus();
-      return;
+      return false;
     }
-    if (agencia.value == "") {
-      alert("Agência não informada");
+
+    if(cpf == "" || cpf.length <= 13){
+      alert("Preencha corretamente o campo o CPF");
+      cpf.focus();
+      return false;
+    }
+
+    if(agencia == ""){
+      alert("Preencha o campo o Agência");
       agencia.focus();
-      return;
+      return false;
     }
-    if (conta.value == "") {
-      alert("Conta não informada");
+
+    if(conta == ""){
+      alert("Preencha o campo o Conta");
       conta.focus();
-      return;
+      return false;
     }
+
 }
 
 function mascaraCPF(i){
@@ -77,7 +77,8 @@ function Guid(arg) {
 //
 function inserirCliente(){
 
-
+    validar();
+    
     var clientes;
     var index;
 
@@ -217,3 +218,4 @@ function limparDados(){
 
 
 }
+
