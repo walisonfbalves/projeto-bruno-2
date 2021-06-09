@@ -6,7 +6,7 @@ function validar(){
     var agencia = form.agencia.value;
     var conta = form.conta.value;
 
-    if(nome == ""){
+      if(nome == "" ){
       alert("Preencha o campo Nome");
       nome.focus();
       return false;
@@ -35,8 +35,7 @@ function validar(){
       conta.focus();
       return false;
     }
-
-}
+  }
 
 function mascaraCPF(i){
    
@@ -50,7 +49,7 @@ function mascaraCPF(i){
  
  }
 
- function apenasNumeros(i){
+ function apenasNumeros(i) {
 
     var v = i.value;
     
